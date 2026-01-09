@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: ride-buddy-backend
+spec:
+  selector:
+    app: ride-buddy-backend
+  ports:
+    - protocol: TCP
+      port: 83
+      targetPort: 3000

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ride-buddy-frontend-deployment
+  labels:
+    app: ride-buddy-frontend
+  namespace: ride-buddy-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ride-buddy-frontend
+  template:
+    metadata:
+      labels:
+        app: ride-buddy-frontend
+    spec:
+      containers:
+      - name: frontend-container
+        image: kalpak15/ride_buddy_frontend:latest
+        ports:
+        - containerPort: 5173
+
