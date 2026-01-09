@@ -49,7 +49,7 @@ ride-buddy/
 ### Step 1: Clone the Repository
 ```bash
 git clone <repository-url>
-cd ride-buddy
+cd Ride-buddy
 ```
 
 
@@ -88,15 +88,13 @@ kubectl get services
 ### Step 5: Access the Application Internally using curl
 Get the external IP or NodePort:
 
+```bash
 minikube service frontend-service -n ride-buddy-backend
 minikube service backend -n ride-buddy-backend
 
 curl -L <url>
 
-
-## License
-
-[Specify your license here]
+```
 
 ## Support
 
